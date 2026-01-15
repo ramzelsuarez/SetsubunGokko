@@ -1293,6 +1293,7 @@ GameObject:
   - component: {fileID: 689586945}
   - component: {fileID: 689586949}
   - component: {fileID: 689586948}
+  - component: {fileID: 689586950}
   m_Layer: 0
   m_Name: Akarin
   m_TagString: Untagged
@@ -1450,6 +1451,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.24, y: 0.33}
   m_Direction: 0
+--- !u!114 &689586950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689586942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067bfcb2bb456114490afcbb310200c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove2D
+  speed: 2
+  sr: {fileID: 689586946}
+  upSprite: {fileID: -1517601343312143917, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
+  downSprite: {fileID: 3542205325786018883, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
+  leftSprite: {fileID: 7520543122943770650, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
+  rightSprite: {fileID: -6410456606036238185, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
 --- !u!1 &712397035
 GameObject:
   m_ObjectHideFlags: 0
