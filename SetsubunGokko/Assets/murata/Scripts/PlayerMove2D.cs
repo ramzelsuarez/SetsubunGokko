@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove2D : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed = 0.01f;
 
     public SpriteRenderer sr;
 

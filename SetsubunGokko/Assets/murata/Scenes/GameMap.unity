@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067bfcb2bb456114490afcbb310200c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove2D
-  speed: 2
+  speed: 0.01
   sr: {fileID: 689586946}
   upSprite: {fileID: -1517601343312143917, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
   downSprite: {fileID: 3542205325786018883, guid: 0f45c17c478bb224db1edf099f48308a, type: 3}
