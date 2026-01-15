@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 5f;
+    [Header("Movement")]
+    public float baseSpeed = 5f;
 
-    public float minX = -7f;
-    public float maxX = 7f;
-    public float minY = -4f;
-    public float maxY = 4f;
+    [Header("Screen Limits")]
+    public float minX = -7f, maxX = 7f, minY = -4f, maxY = 4f;
+
+    float speedMultiplier = 1f;
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
+
+        float speed = baseSpeed * speedMultiplier;
 
         Vector3 pos = transform.position;
         pos.x += moveX * speed * Time.deltaTime;
@@ -23,4 +26,11 @@ public class PlayerMove : MonoBehaviour
 
         transform.position = pos;
     }
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = Mathf.Max(0f, multiplier);
+    }
+
+    public float GetSpeedMultiplier() => speedMultiplier;
 }
