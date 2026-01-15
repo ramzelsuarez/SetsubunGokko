@@ -12,7 +12,7 @@ public class StartButton : MonoBehaviour
     }
     public void onClickTitleButton()
     {
-        SceneManager.LoadScene(" ");
+        SceneManager.LoadScene("titleScenes");
     }
     public void onClickDesktopButton()
     {
