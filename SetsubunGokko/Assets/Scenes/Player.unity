@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 1629052100}
   - component: {fileID: 1629052101}
   m_Layer: 0
-  m_Name: Oni
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 1926878586}
   - component: {fileID: 1926878590}
   - component: {fileID: 1926878589}
+  - component: {fileID: 1926878592}
   - component: {fileID: 1926878591}
   m_Layer: 0
   m_Name: Player
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a05cb13eff2b514fb3b7683aa4348ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  speed: 5
+  baseSpeed: 5
   minX: -7
   maxX: 7
   minY: -4
@@ -598,11 +599,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1926878585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d03724100d82eb4389addd44f74b4d9, type: 3}
+  m_Script: {fileID: 11500000, guid: ac5025cd604ac394789711de76fb7ac8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlink
-  blinkDuration: 0.1
-  blinkCount: 5
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombatStatus
+  maxHits: 3
+  invincibleDuration: 2
+  boostMultiplier: 1.1
+  boostDuration: 3
+  blinkInterval: 0.1
+--- !u!114 &1926878592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926878585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a05cb13eff2b514fb3b7683aa4348ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
+  baseSpeed: 5
+  minX: -7
+  maxX: 7
+  minY: -4
+  maxY: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
